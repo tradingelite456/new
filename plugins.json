@@ -1,21 +1,22 @@
 [
     {
-        "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Korduene_Logo.png",
+        "iconUrl": "https://ekino-tv.pl/views/img/logo.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/recloudstream/TestPlugins",
         "fileSize": 8306,
         "status": 1,
-        "language": "en",
+        "language": "pl",
         "authors": [
-            "Cloudburst"
+            "pawel"
         ],
         "tvTypes": [
-            "Movie"
+            "Movie",
+            "TVseries"
         ],
-        "version": -1,
-        "internalName": "ExampleProvider",
-        "description": "Lorem ipsum",
+        "version": 0.0.1,
+        "internalName": "eKinoTV PL",
+        "description": "Test",
         "url": "https://raw.githubusercontent.com/recloudstream/TestPlugins/builds/ExampleProvider.cs3",
-        "name": "ExampleProvider"
+        "name": "eKinoTV PL"
     }
 ]
