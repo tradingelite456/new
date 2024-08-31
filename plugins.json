@@ -13,7 +13,7 @@
             "Movie",
             "TVseries"
         ],
-        "version": 0.0.1,
+        "version": 1,
         "internalName": "eKinoTV PL",
         "description": "Test",
         "url": "https://raw.githubusercontent.com/recloudstream/TestPlugins/builds/ExampleProvider.cs3",
