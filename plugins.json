@@ -10,8 +10,7 @@
             "pawel"
         ],
         "tvTypes": [
-            "Movie",
-            "TVseries"
+            "Movie"
         ],
         "version": 1,
         "internalName": "eKinoTV PL",
