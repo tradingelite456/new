@@ -16,7 +16,7 @@
         "version": 1,
         "internalName": "eKinoTV PL",
         "description": "Test",
-        "url": "https://raw.githubusercontent.com/recloudstream/TestPlugins/builds/ExampleProvider.cs3",
+        "url": "https://github.com/pawel959/TestPlugins/raw/builds/ExampleProvider.cs3",
         "name": "eKinoTV PL"
     }
 ]
