@@ -27,7 +27,7 @@ cloudstream {
     requiresResources = true
     language = "en"
 
-    // random cc logo i found
+    // Random cc logo I found
     iconUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Korduene_Logo.png"
 }
 
