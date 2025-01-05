@@ -10,10 +10,10 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.4.2")
+        classpath("com.android.tools.build:gradle:8.7.3")
         // Cloudstream gradle plugin which makes everything work and builds plugins
-        classpath("com.github.recloudstream:gradle:-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0")
+        classpath("com.github.Luna712:gradle:master-SNAPSHOT")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
     }
 }
 
@@ -36,14 +36,18 @@ subprojects {
 
     cloudstream {
         // when running through github workflow, GITHUB_REPOSITORY should contain current repository name
-        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "user/repo")
+        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "https://github.com/example/repo")
+
+        authors = listOf("example")
     }
 
     android {
+        namespace = "com.example"
+
         defaultConfig {
-            minSdk = 26
-            compileSdkVersion(33)
-            targetSdk = 33
+            minSdk = 21
+            compileSdkVersion(35)
+            targetSdk = 35
         }
 
         compileOptions {
@@ -51,14 +55,16 @@ subprojects {
             targetCompatibility = JavaVersion.VERSION_1_8
         }
 
-        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-            kotlinOptions {
-                jvmTarget = "1.8" // Required
-                // Disables some unnecessary features
-                freeCompilerArgs = freeCompilerArgs +
-                        "-Xno-call-assertions" +
-                        "-Xno-param-assertions" +
+        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile> {
+            compilerOptions {
+                jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
+                freeCompilerArgs.addAll(
+                    listOf(
+                        "-Xno-call-assertions",
+                        "-Xno-param-assertions",
                         "-Xno-receiver-assertions"
+                    )
+                )
             }
         }
     }
@@ -82,5 +88,5 @@ subprojects {
 }
 
 task<Delete>("clean") {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
