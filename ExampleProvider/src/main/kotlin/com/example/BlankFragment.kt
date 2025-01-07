@@ -33,6 +33,7 @@ class BlankFragment(private val plugin: ExamplePlugin) : BottomSheetDialogFragme
 
     // Helper function to get a string resource by name
     @SuppressLint("DiscouragedApi")
+    @Suppress("SameParameterValue")
     private fun getString(name: String): String? {
         val id = plugin.resources?.getIdentifier(name, "string", BuildConfig.LIBRARY_PACKAGE_NAME)
         return id?.let { plugin.resources?.getString(it) }
