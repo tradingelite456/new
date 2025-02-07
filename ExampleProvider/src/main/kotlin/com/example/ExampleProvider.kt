@@ -6,8 +6,8 @@ import com.lagradost.cloudstream3.MainAPI
 import com.lagradost.cloudstream3.SearchResponse
 
 class ExampleProvider(val plugin: TestPlugin) : MainAPI() { // all providers must be an intstance of MainAPI
-    override var mainUrl = "https://filmpalast.to/" 
-    override var name = "filmpalast"
+    override var mainUrl = "https://streamcloud.my/streamcloud/" 
+    override var name = "StreamCloud"
     override val supportedTypes = setOf(TvType.Movie)
 
     override var lang = "de"
