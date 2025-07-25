@@ -1,22 +1,25 @@
 [
-    {
-        "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Korduene_Logo.png",
+   {
+        "iconUrl": "https://onlineserietv.com/wp-content/uploads/2023/01/cropped-tv-1.png",
         "apiVersion": 1,
-        "repositoryUrl": "https://github.com/recloudstream/TestPlugins",
-        "fileSize": 7311,
-        "status": 1,
-        "language": "en",
+        "repositoryUrl": "https://github.com/danix160/video",
+        "fileSize": 20340,
+        "status": 0,
+        "language": "it",
         "authors": [
-            "Cloudburst",
-            "Luna712"
+            "doGior"
         ],
         "tvTypes": [
-            "Movie"
+            "Movie",
+            "TvSeries",
+            "Cartoon",
+            "Anime",
+            "Documentary"
         ],
-        "version": 1,
-        "internalName": "ExampleProvider",
-        "description": "Lorem ipsum",
-        "url": "https://raw.githubusercontent.com/recloudstream/TestPlugins/builds/ExampleProvider.cs3",
-        "name": "ExampleProvider"
+        "version": 3,
+        "internalName": "OnlineSerieTV",
+        "description": "Movies and Shows from OnlineSerieTV",
+        "url": "https://raw.githubusercontent.com/danix160/video/builds/OnlineSerieTV.cs3",
+        "name": "OnlineSerieTV"
     }
 ]
