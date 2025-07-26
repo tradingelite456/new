@@ -1,4 +1,22 @@
-rootProject.name = "CloudstreamPlugins"
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven("https://jitpack.io")
+    }
+    plugins {
+        id("com.lagradost.cloudstream3.gradle") version "1.0.0"
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven("https://jitpack.io")
+    }
+}
+
+rootProject.name = "DinoStreaming"
+
 
 // This file sets what projects are included.
 // All new projects should get automatically included unless specified in the "disabled" variable.
