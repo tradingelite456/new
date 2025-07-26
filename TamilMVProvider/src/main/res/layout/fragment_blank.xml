@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".BlankFragment">
+    tools:context=".TamilMVFragment">
 
     <TextView
         android:id="@+id/textView"
