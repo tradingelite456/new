@@ -1,25 +1,22 @@
 [
    {
-        "iconUrl": "https://onlineserietv.com/wp-content/uploads/2023/01/cropped-tv-1.png",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/danix160/video",
-        "fileSize": 20340,
-        "status": 1,
-        "language": "it",
-        "authors": [
-            "danix160"
-        ],
-        "tvTypes": [
-            "Movie",
-            "TvSeries",
-            "Cartoon",
-            "Anime",
-            "Documentary"
-        ],
-        "version": 3,
-        "internalName": "OnlineSerieTV",
-        "description": "Movies and Shows from OnlineSerieTV",
-        "url": "https://raw.githubusercontent.com/danix160/video/builds/OnlineSerieTV.cs3",
-        "name": "OnlineSerieTV"
-    }
+  "iconUrl": "https://dinostreaming.it/favicon.ico",
+  "apiVersion": 1,
+  "repositoryUrl": "https://github.com/Danix160/video",
+  "fileSize": 30000,
+  "status": 1,
+  "language": "it",
+  "authors": [
+    "doGior"
+  ],
+  "tvTypes": [
+    "Movie",
+    "TvSeries"
+  ],
+  "version": 1,
+  "internalName": "DinoStreaming",
+  "description": "Movies and Shows from DinoStreaming",
+  "url": "https://raw.githubusercontent.com/Danix160/video/builds/DinoStreaming.cs3",
+  "name": "DinoStreaming"
+}
 ]
