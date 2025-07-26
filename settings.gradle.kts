@@ -1,12 +1,18 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven("https://jitpack.io")
+        maven("https://jitpack.io") // ✅ NECESSARIO PER I PLUGIN
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven("https://jitpack.io") // ✅ NECESSARIO PER LE DIPENDENZE
     }
 }
 
 rootProject.name = "DinoStreaming"
-
 
 // This file sets what projects are included.
 // All new projects should get automatically included unless specified in the "disabled" variable.
