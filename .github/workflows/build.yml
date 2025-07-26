@@ -24,12 +24,6 @@ jobs:
       - name: Build plugin
         run: ./gradlew build
 
-      - name: Upload plugin artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: DinoStreaming.cs3
-          path: build/libs/*.cs3
-
       - name: Deploy to builds branch
         uses: peaceiris/actions-gh-pages@v4
         with:
