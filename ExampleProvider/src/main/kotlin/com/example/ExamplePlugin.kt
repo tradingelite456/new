@@ -12,13 +12,14 @@ class ExamplePlugin: Plugin() {
     override fun load(context: Context) {
         activity = context as? AppCompatActivity
 
-        // All providers should be added in this manner
+        // Register our CinePulse provider
         registerMainAPI(ExampleProvider())
 
+        // Optional: Open settings fragment if needed
         openSettings = {
             val frag = BlankFragment(this)
             activity?.let {
-                frag.show(it.supportFragmentManager, "Frag")
+                frag.show(it.supportFragmentManager, "CinePulseSettings")
             }
         }
     }
