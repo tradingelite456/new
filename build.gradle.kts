@@ -28,8 +28,8 @@ allprojects {
     
     // Configuration JVM Toolchain pour tous les projets
     plugins.withId("org.jetbrains.kotlin.android") {
-        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-            kotlinOptions.jvmTarget = "17"
+        configure<org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension> {
+            jvmToolchain(17)
         }
     }
     
@@ -61,8 +61,8 @@ subprojects {
 
         defaultConfig {
             minSdk = 21
-            compileSdk = 35
-            targetSdk = 35
+            compileSdk = 34 // Utilisez compileSdk au lieu de compileSdkVersion
+            targetSdk = 34
         }
 
         compileOptions {
@@ -70,15 +70,14 @@ subprojects {
             targetCompatibility = JavaVersion.VERSION_17
         }
 
-        tasks.withType<KotlinJvmCompile> {
-            compilerOptions {
-                jvmTarget.set(JvmTarget.JVM_17) // Changé de JVM_1_8 à JVM_17
-                freeCompilerArgs.addAll(
-                    "-Xno-call-assertions",
-                    "-Xno-param-assertions",
-                    "-Xno-receiver-assertions"
-                )
-            }
+        // Correction: Utilisation du DSL compilerOptions au lieu de kotlinOptions déprécié
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
+        }
+        
+        kotlin {
+            jvmToolchain(17)
         }
     }
 
