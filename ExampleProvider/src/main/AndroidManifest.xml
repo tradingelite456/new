@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <provider
+            android:name="com.lagradost.cloudstream3.providers.AppProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            tools:ignore="ExportedContentProvider" />
+
+        <service
+            android:name="com.lagradost.cloudstream3.providers.AppProviderService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.lagradost.cloudstream3.IPROVIDER" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
