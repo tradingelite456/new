@@ -1,25 +1,24 @@
-package com.example
+package com.lagradost
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
+import com.lagradost.cloudstream3.APIHolder
+import android.content.Context
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 
 @CloudstreamPlugin
-class ExamplePlugin: Plugin() {
-    private var activity: AppCompatActivity? = null
+class TestPlugin: Plugin() {
+    var activity: AppCompatActivity? = null
 
     override fun load(context: Context) {
-        activity = context as? AppCompatActivity
-
+        activity = context as AppCompatActivity
         // All providers should be added in this manner
-        registerMainAPI(ExampleProvider())
+        registerMainAPI(ExampleProvider(this))
 
-        openSettings = {
+        openSettings = { ctx ->
             val frag = BlankFragment(this)
-            activity?.let {
-                frag.show(it.supportFragmentManager, "Frag")
-            }
+            frag.show(activity!!.supportFragmentManager, "Frag")
         }
     }
 }
