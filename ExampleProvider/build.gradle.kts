@@ -25,7 +25,7 @@ android {
     }
 }
 
-// Configuration du toolchain Kotlin
+// Ajoutez cette configuration Kotlin au niveau racine
 kotlin {
     jvmToolchain(17)
 }
