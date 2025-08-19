@@ -16,9 +16,6 @@ class TestPlugin: Plugin() {
         // All providers should be added in this manner
         registerMainAPI(ExampleProvider(this))
 
-        openSettings = { ctx ->
-            val frag = BlankFragment(this)
-            frag.show(activity!!.supportFragmentManager, "Frag")
-        }
+       
     }
 }
