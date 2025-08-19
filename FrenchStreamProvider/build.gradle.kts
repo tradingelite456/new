@@ -1,10 +1,35 @@
 // use an integer for version numbers
 version = 8
+
+plugins {
+    id("com.android.library")
+    kotlin("android")
+}
+
+android {
+    compileSdk = 34
+    
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
+    
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
 dependencies {
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 }
+
 cloudstream {
     language = "fr"
     // All of these properties are optional, you can safely remove them
@@ -28,9 +53,8 @@ cloudstream {
     iconUrl = "https://www.google.com/s2/favicons?domain=french-stream.ac&sz=%size%"
     requiresResources = true
 }
-android {
-    buildFeatures {
-        buildConfig = true
-        viewBinding = true
-    }
+
+// Configuration JVM Toolchain pour résoudre l'erreur de compatibilité
+kotlin {
+    jvmToolchain(17)
 }
