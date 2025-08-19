@@ -16,18 +16,22 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     buildFeatures {
         buildConfig = true
-        // viewBinding = true // Décommentez seulement si vous en avez vraiment besoin
     }
 }
 
+// Configuration du toolchain Kotlin
+kotlin {
+    jvmToolchain(17)
+}
+
 dependencies {
-    // Les APIs Cloudstream sont fournies par l'application hôte, pas besoin de dépendance externe
     implementation("org.jsoup:jsoup:1.17.1")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("androidx.core:core-ktx:1.13.1")
 }
 
 version = 1
